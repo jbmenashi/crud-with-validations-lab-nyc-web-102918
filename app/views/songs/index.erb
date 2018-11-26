@@ -8,7 +8,7 @@
         <td><%= song.artist_name %></td>
         <td><%= song.genre %></td>
         <td><%= button_to('Destroy', songs_path,
-          method: "delete", { confirm: 'Are you sure?', disable_with: 'loading...' }) %></td>
+          method: "delete", remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' }) %></td>
       </tr>
     <% end %>
   </tbody>
